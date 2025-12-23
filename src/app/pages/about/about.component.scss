@@ -1,0 +1,131 @@
+.about-section {
+    min-height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(139, 94, 60, 0.18) 2px,
+      transparent 0
+    );
+    background-size: 40px 40px;
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-wrapper {
+    width: 100%;
+    max-width: 1400px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: #38bdf8;
+  }
+  
+  .about-main-card {
+    background: #0c0c0c;
+    border-radius: 36px;
+    padding: 60px;
+    border: 3px solid transparent;
+    position: relative;
+  }
+  
+  .about-main-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 36px;
+    padding: 3px;
+    background: linear-gradient(
+      120deg,
+      #4c1d95,
+      #1e3a8a,
+      #065f46,
+      #3f3f46
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  
+  .about-main-card:hover::after {
+    opacity: 1;
+  }
+  
+  .about-sub-card {
+    background: #0b0b0b;
+    border-radius: 24px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    border: 2px solid #1f2933;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-sub-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    color: #e5e7eb;
+    border-left: 4px solid #38bdf8;
+    padding-left: 12px;
+  }
+  
+  .profile-text {
+    color: #d1d5db;
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+  
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    color: #d1d5db;
+  }
+  
+  .edu-item span {
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+  
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  
+  .cert-card {
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: #0c0c0c;
+    border: 2px solid #1f2933;
+    color: #e5e7eb;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 900px) {
+    .about-main-card {
+      padding: 36px 28px;
+    }
+  
+    .section-title {
+      font-size: 2.2rem;
+    }
+  }
+  

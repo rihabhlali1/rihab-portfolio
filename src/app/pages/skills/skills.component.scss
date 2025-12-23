@@ -1,0 +1,127 @@
+.skills-section {
+    padding: 8rem 2rem 4rem;
+    background: #0b0d12;
+    color: #e5e7eb;
+  
+    .section-title {
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 4rem;
+      color: #ffffff;
+  
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #4f46e5;
+        margin: 12px auto 0;
+      }
+    }
+  
+    /* ===== GRID ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* ===== CATEGORY CARD ===== */
+    .skill-category {
+      background: #141824;
+      border-radius: 18px;
+      padding: 26px;
+      border: 2px solid #1f2433;
+  
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease;
+  
+      &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      &:hover {
+        border-color: #4f46e5;
+      }
+  
+      .category-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+  
+        h3 {
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 500;
+        }
+      }
+  
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+  
+        .skill-item {
+          background: #0f1320;
+          border: 1.5px solid #2a2f45;
+          border-radius: 999px;
+          padding: 6px 14px;
+          font-size: 0.85rem;
+          color: #d1d5db;
+          transition: border-color 0.25s ease;
+  
+          &:hover {
+            border-color: #6366f1;
+          }
+        }
+      }
+    }
+  
+    /* ===== OTHER SKILLS ===== */
+    .additional-skills {
+      margin-top: 4rem;
+      text-align: center;
+  
+      .subsection-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.8rem;
+        color: #c7d2fe;
+      }
+  
+      .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+  
+        .skill-tag {
+          background: #0f1320;
+          border: 1.5px solid #2a2f45;
+          border-radius: 999px;
+          padding: 6px 16px;
+          font-size: 0.8rem;
+          color: #d1d5db;
+          transition: border-color 0.25s ease;
+  
+          &:hover {
+            border-color: #6366f1;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,56 @@
+<section class="experience-section">
+    <div class="section-title">
+      Professional Experience
+    </div>
+  
+    <p class="section-subtitle">
+      Building expertise through hands-on cybersecurity implementations
+    </p>
+  
+    <div class="experience-grid">
+      <div
+        class="experience-card"
+        *ngFor="let exp of experiences"
+        #experienceCard
+      >
+        <div class="card-header">
+          <div class="card-icon">
+            <!-- Inline SVG icon (no assets, no install) -->
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+  
+          <div class="card-title">
+            <h3>{{ exp.role }}</h3>
+            <span class="company">
+              {{ exp.company }} • {{ exp.year }}
+            </span>
+          </div>
+        </div>
+  
+        <p class="card-description">
+          {{ exp.description }}
+        </p>
+  
+        <div class="skills-list">
+          <span
+            class="skill-item"
+            *ngFor="let skill of exp.skills"
+          >
+            {{ skill }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  

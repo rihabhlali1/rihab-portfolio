@@ -1,0 +1,20 @@
+.eye-counter {
+    position: fixed; /* stays in place when scrolling */
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    color: #00ffc8;
+    padding: 10px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    z-index: 1000; /* stays above other content */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  .eye-icon {
+    font-size: 1.4rem;
+  }
+  

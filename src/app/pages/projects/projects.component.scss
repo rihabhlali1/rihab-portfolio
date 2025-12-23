@@ -1,0 +1,119 @@
+.projects-section {
+    padding: 8rem 2rem 4rem;
+    background: #000;
+    color: #fff;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #38bdf8;
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: #38bdf8;
+      margin: 12px auto 0;
+    }
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #d1d5db;
+    margin-bottom: 4rem;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ===== PROJECT CARD ===== */
+  .project-card {
+    background: #141824;
+    border-radius: 18px;
+    padding: 26px;
+    border: 2px solid #1f2433;
+  
+    /* SAME SCROLL ANIMATION AS EXPERIENCE */
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease,
+      border-color 0.3s ease;
+  
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  
+    &:hover {
+      border-color: #38bdf8;
+    }
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+  
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(56, 189, 248, 0.15);
+    border-radius: 14px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    svg {
+      color: #38bdf8;
+    }
+  }
+  
+  .project-description {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tech-item {
+    background: #0f1320;
+    border: 1.5px solid #2a2f45;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    color: #d1d5db;
+    transition: border-color 0.25s ease;
+  
+    &:hover {
+      border-color: #38bdf8;
+    }
+  }
+  

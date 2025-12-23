@@ -1,0 +1,126 @@
+.experience-section {
+    padding: 8rem 2rem 4rem;
+    background: #000000;
+    color: #ffffff;
+  
+    .section-title {
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #00c8a0;
+  
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #00c8a0;
+        margin: 12px auto 0;
+      }
+    }
+  
+    .section-subtitle {
+      text-align: center;
+      color: #d1d5db;
+      margin-bottom: 4rem;
+    }
+  
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+  
+      .experience-card {
+        background: #141824;
+        border-radius: 18px;
+        padding: 26px;
+        border: 2px solid #1f2433;
+  
+        /* Scroll animation */
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease,
+          border-color 0.3s ease;
+  
+        &.in-view {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+  
+        &:hover {
+          border-color: #00c8a0;
+        }
+  
+        .card-header {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 18px;
+  
+          .card-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 200, 160, 0.15);
+            border-radius: 14px;
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            svg {
+              color: #00c8a0;
+            }
+          }
+  
+          .card-title {
+            h3 {
+              margin: 0;
+              font-size: 1.25rem;
+              font-weight: 500;
+            }
+  
+            .company {
+              color: #00c8a0;
+              font-size: 0.9rem;
+            }
+          }
+        }
+  
+        .card-description {
+          color: #d1d5db;
+          margin-bottom: 16px;
+          line-height: 1.6;
+        }
+  
+        .skills-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+  
+          .skill-item {
+            background: #0f1320;
+            border: 1.5px solid #2a2f45;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            color: #d1d5db;
+            transition: border-color 0.25s ease;
+  
+            &:hover {
+              border-color: #00c8a0;
+            }
+          }
+        }
+      }
+    }
+  }
+  

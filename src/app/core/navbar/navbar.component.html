@@ -1,0 +1,28 @@
+<header class="navbar">
+    <div class="navbar-container">
+  
+      <!-- LOGO / NAME -->
+      <div class="logo" (click)="scrollTo('home')">
+        Rihab<span>.</span>
+      </div>
+  
+      <!-- MENU ICON (MOBILE) -->
+      <div class="menu-icon" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <!-- NAV LINKS -->
+      <ul [class.open]="isMenuOpen">
+        <li (click)="scrollTo('home')">Home</li>
+        <li (click)="scrollTo('about')">About</li>
+        <li (click)="scrollTo('skills')">Skills</li>
+        <li (click)="scrollTo('experience')">Experience</li>
+        <li (click)="scrollTo('projects')">Projects</li>
+        <li (click)="scrollTo('contact')">Contact</li>
+      </ul>
+  
+    </div>
+  </header>
+  

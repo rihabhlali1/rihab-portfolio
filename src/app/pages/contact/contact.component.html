@@ -1,0 +1,21 @@
+<div class="contact-bg">
+  <div class="contact-card">
+
+    <h2>Contact Me</h2>
+    <p>Feel free to get in touch for projects or collaborations.</p>
+
+    <form (submit)="sendMessage()">
+      <input type="text" placeholder="Your Name" [(ngModel)]="contact.name" name="name" required />
+      <input type="email" placeholder="Your Email" [(ngModel)]="contact.email" name="email" required />
+      <textarea placeholder="Your Message" [(ngModel)]="contact.message" name="message" rows="5" required></textarea>
+      <button type="submit" class="btn-circle">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:rihabhleli9&#64;gmail.com">rihabhleli9&#64;gmail.com</a></p>
+      <p>Phone: <a href="tel:+21651553717">+216 51 553 717</a></p>
+      <p>Location: Tunis, Tunisia</p>
+    </div>
+
+  </div>
+</div>

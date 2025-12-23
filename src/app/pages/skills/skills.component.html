@@ -1,0 +1,24 @@
+<section id="skills" class="skills-section section">
+  <div class="container">
+    <h2 class="section-title">Compétences Techniques</h2>
+
+    <div class="skills-grid">
+      <div class="skill-category card fade-in" *ngFor="let category of skillCategories" #skillCard>
+        <div class="category-header">
+          <span class="category-icon">{{ category.icon }}</span>
+          <h3>{{ category.name }}</h3>
+        </div>
+        <div class="skills-list">
+          <div class="skill-item" *ngFor="let skill of category.skills">{{ skill }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="additional-skills">
+      <h3 class="subsection-title">Autres Compétences</h3>
+      <div class="tags-container">
+        <span class="skill-tag" *ngFor="let tag of additionalSkills" #skillTag>{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
