@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
   sendMessage() {
     if (this.contact.name && this.contact.email && this.contact.message) {
       // Send the message to backend
-      this.http.post('http://localhost:3000/api/contact', this.contact)
+      this.http.post('https://portfolio-backend-production-fba2.up.railway.app/api/contact', this.contact)
         .subscribe({
           next: (res: any) => {
             alert('Message sent! Thank you.');

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ViewService {
 
-  private apiUrl = 'http://localhost:3000/api/view'; // your backend endpoint
+  private apiUrl = 'https://portfolio-backend-production-fba2.up.railway.app/api/view'; // your backend endpoint
 
   constructor(private http: HttpClient) { }
 
